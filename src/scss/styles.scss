@@ -1,0 +1,298 @@
+@import 'bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(182, 189, 86);
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  z-index: 9999;
+  display: none;
+  width: 650px;
+  max-height: 100vh;
+  overflow-y: auto;
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.774);
+}
+
+.popup::-webkit-scrollbar {
+  width: 0.5em;
+  background-color: transparent;
+}
+
+.popup::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.popup::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+body {
+  background-color: rgb(141, 125, 125);
+  font-size: 14px;
+  color: black;
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.navbar {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 2rem 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding-left: 0.625rem;
+  width: auto;
+}
+
+.nav-link.active {
+  color: darkgoldenrod !important;
+}
+
+main.container {
+  margin-top: 30px;
+}
+
+.navbar-collapse {
+  justify-content: center;
+}
+
+.navbar-nav .nav-link {
+  color: darkgoldenrod;
+  font-weight: bold;
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: color 0.3s;
+  transition: transform 0.3s;
+  margin: 30px;
+}
+
+.navbar-nav .nav-link:hover {
+  color: darkgoldenrod;
+  background-color: rgba(153, 151, 42, 0.2);
+  border-radius: 5px;
+  transform: scale(1.1);
+}
+
+#card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background-color: rgb(195, 204, 160);
+  width: auto;
+  height: auto;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+}
+
+.like-button:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+}
+
+.comment-button {
+  background-color: rgb(146, 165, 78);
+  font-weight: bold;
+  color: black;
+  font-family: 'Poppins', sans-serif;
+}
+
+.comment-button:hover {
+  background-color: rgb(114, 126, 6);
+}
+
+footer {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 2rem 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding-left: 0.625rem;
+  width: auto;
+  border-top: 1px solid #dee2e6;
+}
+
+footer p {
+  text-align: center;
+}
+
+footer p a {
+  margin: 0 5px;
+  font-size: 18px;
+  text-decoration: none;
+  color: darkorange;
+  font-family: 'Poppins', sans-serif;
+}
+
+.popup-content {
+  margin-top: -15px;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.popup-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.popup-name,
+.popup-gender,
+.popup-country,
+.popup-timezone {
+  margin-bottom: 5px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  font-size: 25px;
+  color: #888;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#comment-form {
+  margin-top: 20px;
+}
+
+#comment-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#comment-form input[type='text'] {
+  width: 50%;
+  background-color: rgb(203, 207, 198);
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid rgb(59, 75, 3);
+  border-radius: 10px;
+  height: 3vh;
+}
+
+#comment-button {
+  display: flex;
+  margin-left: 250px;
+  background-color: #533e03;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+#comment-button:hover {
+  background-color: #025226;
+}
+
+.popup-message {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.popup-comment-button {
+  display: block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #333;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.comment-item {
+  margin-top: 20px;
+  max-height: 100px;
+  overflow-y: auto;
+}
+
+.popup-comment {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.comment-p {
+  color: #555454;
+  font-size: larger;
+}
+
+@media (max-width: 767px) {
+  .popup {
+    width: 90%;
+    max-width: 350px;
+    padding: 10px;
+    height: 90vh;
+  }
+
+  #comment-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 33%;
+  }
+
+  #card {
+    display: grid;
+    grid-template-columns: auto;
+  }
+}
