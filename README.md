@@ -67,7 +67,7 @@ The TV-Show Actors and Actresses website is a platform that provides information
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://ansaribrahim.github.io/Capstone-2/dist/)
+- [Live Demo Link](https://shows-tv.netlify.app/)
 - [Video Walkthrough](https://drive.google.com/file/d/1Q2mPYh1XaOS6ccOUnBVXqbYsG0A6opzd/view?usp=sharing)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
